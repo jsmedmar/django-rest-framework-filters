@@ -1,13 +1,14 @@
 
-from django.db import models
 from django.contrib.auth.models import User
+from django.contrib.postgres.fields import JSONField
+from django.db import models
 
 
 class Note(models.Model):
     title = models.CharField(max_length=100)
     content = models.TextField()
     author = models.ForeignKey(User, on_delete=models.CASCADE)
-
+    jsons = JSONField()
 
 class Post(models.Model):
     note = models.ForeignKey(Note, on_delete=models.CASCADE)

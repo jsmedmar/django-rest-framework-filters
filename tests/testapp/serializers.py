@@ -13,4 +13,4 @@ class UserSerializer(serializers.ModelSerializer):
 class NoteSerializer(serializers.ModelSerializer):
     class Meta:
         model = Note
-        fields = ('pk', 'title', 'content', 'author', )
+        fields = ('pk', 'title', 'content', 'author', 'jsons' )

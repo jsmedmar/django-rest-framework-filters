@@ -53,6 +53,7 @@ class NoteFilterWithRelated(FilterSet):
 class NoteFilterWithRelatedAll(FilterSet):
     title = filters.CharFilter(name='title')
     author = RelatedFilter(UserFilterWithAll, name='author')
+    jsons = AllLookupsFilter(name='jsons')
 
     class Meta:
         model = Note

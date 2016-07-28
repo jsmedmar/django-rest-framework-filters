@@ -3,13 +3,9 @@ DEBUG = True
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'db.sqlite3',
-
-        'TEST': {
-            'NAME': ':memory:',
-        },
-    },
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'drff',
+    }
 }
 
 INSTALLED_APPS = (
